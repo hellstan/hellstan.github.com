@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Authoring 1 / Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="patrick mardy">
+</head>
+<body>
+
+<header>
+<h1>Web Authoring 1 Projects & Exercises</h1>
+<h2>By Patrick Mardy</h2>
+</header>
+
+<section id="exercises" hidden>
+  <h3>Exercises</h3>
+  <ul>
+   <li><a href="#">Coming soon...</a></li>
+  </ul>
+ </section>
+
+<section id="projects">
+ <h3>projects</h3>
+ <ul>
+   <li><a href="html5-haiku-single/index.html">HTML5 Haiku</a></li>
+   <li><a href="">HTML5 HTML Document( for screen & print)</a></li>
+   <li><a href="hTML5-document/index.html"> HTML Document</a></li>
+ </ul>
+</section>
+
+
+</body>
+</html>
