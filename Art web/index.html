@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Art web.html</title>
+		<meta charset="utf-8">
+		<script  src="script.js"></script>
+		<link rel="stylesheet" href="css/screen.css">
+		<style>
+
+		</style>
+	</head>
+
+	<ul class="topnav" id="myTopnav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="art.html">Art</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+</html>
+<html>
+
+	<body>
+
+
+    </body>
+<body>
+</html>
+
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/three.min.js"></script>
+		<script src="http://brangerbriz.net/labs/threejs_playGnd/js/Detector.js"></script>
+		<script>
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+			var camera, scene, renderer;
+			var geometry, material, mesh;
+
+			function setup() {
+
+				var W = window.innerWidth, H = window.innerHeight;
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( W, H );
+				document.body.appendChild( renderer.domElement );
+
+				camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
+				camera.position.z = 500;
+
+				scene = new THREE.Scene();
+
+
+
+				geometry = new THREE.SphereGeometry(40, 40, 40);
+				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
+				mesh2 = new THREE.Mesh(geometry, material);
+				scene.add(mesh2);
+
+				geometry = new THREE.TorusGeometry(150, 26.88, 17, 30, 6.29);
+				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
+				mesh1 = new THREE.Mesh(geometry, material);
+				mesh1.scale.x = mesh1.scale.y = mesh1.scale.z = 1.17;
+				scene.add(mesh1);
+
+				geometry = new THREE.TorusGeometry(100, 10.88, 10, 30, 6.29);
+				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
+				mesh = new THREE.Mesh(geometry, material);
+				mesh.scale.x = mesh.scale.y = mesh.scale.z = 1.17;
+				scene.add(mesh);
+
+
+			}
+
+			function draw() {
+
+				requestAnimationFrame( draw );
+
+
+				mesh.rotation.x = Date.now() * 0.0005;
+				mesh.rotation.y = Date.now() * 0.0002;
+				mesh.rotation.z = Date.now() * 0.001;
+
+				mesh1.rotation.x = Date.now() * 0.0010;
+				mesh1.rotation.y = Date.now() * 0.0002;
+				mesh1.rotation.z = Date.now() * 0.001;
+
+				mesh2.rotation.x = Date.now() * 0.0010;
+				mesh2.rotation.y = Date.now() * 0.0002;
+				mesh2.rotation.z = Date.now() * 0.001;
+
+				renderer.render( scene, camera );
+
+			}
+
+			setup();
+			draw();
+
+		</script>
+
+	</body>
+</html>
